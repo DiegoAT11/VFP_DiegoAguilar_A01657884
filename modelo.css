@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.container p {
+    text-align: center;
+    color: black;
+}
+
+/* El Modelo */
+
+.wrapper{
+    perspective: 900px;
+    display: flex;
+    gap: 100px;
+}
+
+.wrapper, .single-card{
+    height: 450px;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+}
+
+.single-card{
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover .single-card{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    width: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.front{
+    cursor: pointer;
+    height: 100%;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center center;
+    background: #4688A4;
+}
+
+.front h2{
+    font-size: 30px;
+    color: white;
+}
+
+.front img{
+    width: 300px;
+    height: 270px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    border-radius: 50px;
+    height: 450px;
+    background: #4688A4;
+}
+
+.content-wr p{
+    padding-top: 50%;
+    font-size: 20px;
+    color: white;
+}
+
+/* Los Talentos */
+
+.talent-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 400px;
+}
+
+.tabs{
+    position: relative;
+    width: 80px;
+    padding: 40px 0;
+}
+
+.tabs input{
+    appearance: none;
+    display: none;
+}
+
+.tabs .icon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs .icon label{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    opacity: 0.25;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tabs input:nth-child(1):checked ~ .icon label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .icon label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .icon label:nth-child(3),
+.tabs input:nth-child(4):checked ~ .icon label:nth-child(4){
+    opacity: 1;
+}
+
+.indicator{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #70C4D7;
+    z-index: 1;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 8px 8px 0 8px #70C4D7;
+}
+
+
+.indicator::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 8px -8px 0 8px #70C4D7;
+}
+
+
+.tabs input:nth-child(1):checked ~ .icon .indicator{
+    top: 0;
+}
+
+.tabs input:nth-child(2):checked ~ .icon .indicator{
+    top: 25%;
+}
+
+.tabs input:nth-child(3):checked ~ .icon .indicator{
+    top: 50%;
+}
+
+.tabs input:nth-child(4):checked ~ .icon .indicator{
+    top: 75%;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 1020px;
+    height: 600px;
+    background: linear-gradient(90deg, #70C4D7, #34547B);
+    border-radius: 20px;
+}
+
+.content .contentBx{
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.tabs input:nth-child(1):checked ~ .content .contentBx:nth-child(1),
+.tabs input:nth-child(2):checked ~ .content .contentBx:nth-child(2),
+.tabs input:nth-child(3):checked ~ .content .contentBx:nth-child(3),
+.tabs input:nth-child(4):checked ~ .content .contentBx:nth-child(4){
+    opacity: 1;
+    visibility: visible;
+}
+
+.content .contentBx h2{
+    color: white;
+}
+.content .contentBx p{
+    color: white;
+}
+.content .contentBx img{
+    border-radius: 15px;
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    display: block;
+}

@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.container p {
+    text-align: center;
+}
+
+
+
+/* Comunidad */
+
+.flip-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.flip-container .flip-card {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    background: #34547B;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.flip-container .flip-card:hover {
+    height: 350px;
+}
+
+
+.flip-container .flip-card .imgBx {
+    position: absolute;
+    inset: 20px 20px 50px 20px;
+    background: #70C4D7;
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.flip-container .flip-card:hover .imgBx {
+    inset: -50px 60px 250px 60px;
+    box-shadow: 0 0 0 10px white;
+}
+
+.flip-container .flip-card .imgBx::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    left: -30px;
+    border-top-right-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: 5px -5px 0 4px white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.flip-container .flip-card:hover .imgBx::before {
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+
+.flip-container .flip-card .imgBx::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    right: -30px;
+    border-top-left-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: -5px -5px 0 4px white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.flip-container .flip-card:hover .imgBx::after {
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+
+.flip-container .flip-card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.flip-container .flip-card p{
+    position: relative;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+
+.flip-container .flip-card:hover p{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(40px);
+}
+
+.flip-container .flip-card h2{
+    position: absolute;
+    bottom: -18px;
+    color: white;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.flip-container .flip-card:hover h2{
+    padding: 5px 25px;
+    background: #70C4D7;
+    bottom: -25px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px white;
+}
+
+/* Logos - Alianzas */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before,
+.logos::after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+.logos::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 5s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 300px;
+    margin: 0 40px;
+}
+
+/* Testimonios */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cards {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    text-align: center;
+    padding: 5rem 2rem 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.cards::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: #70C4D7;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.cards span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.cards h4 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #70C4D7;
+    transition: 0.3s;
+}
+
+.cards p {
+    margin-bottom: 2rem;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.cards img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    border-radius: 100%;
+    border: 2px solid #70C4D7;
+    transition: 0.3s;
+}
+
+.cards h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #70C4D7;
+    transition: 0.3s;
+}
+
+.cards h6 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.cards:hover::before {
+    width: 400%;
+}
+
+.cards:hover :is(h4, h5) {
+    color: white;
+}
+
+.cards:hover :is(p, h6) {
+    color: white;
+}
+
+
+.cards:hover img {
+    border-color: white;
+}

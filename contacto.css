@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(https://vfpmexico.org/images/contactoImage.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 729px;
+}
+
+.container{
+    display: grid;
+    padding: 20px;
+    gap: 10px;
+    width: 1000px;
+}
+
+.box-info{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.box-info h1{
+    text-align: left;
+    letter-spacing: 5px;
+    font-size: 80px;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 25px;
+}
+
+.data p i{
+   color: #70C4D7;
+   margin-right: 10px;
+   font-size: 30px;
+}
+
+.links{
+    display: flex;
+    gap: 15px;
+}
+
+.links a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: #70C4D7;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.links a i{
+    color: white;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.links a:hover{
+    background: #34547B;
+}

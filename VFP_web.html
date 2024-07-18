@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Violines Por La Paz</title>
+
+    <!-- Latest compiled and minified CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="navbarStyle.css" />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <img id="logo" src="https://vfpmexico.org/images/banner_f.png" alt="Logo de Violines" class="rounded"
+                width="125" height="140">
+
+            <nav class="navbar navbar-expand-md bg-transparent navbar-light">
+                <!-- Brand -->
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Quiénes Somos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Modelo.html">Modelo de Aprendizaje</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Comunidad.html">Comunidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Campañas.html">Campañas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button onclick="window.location.href='https://www.paypal.com/donate/?hosted_button_id=QT4ZRWJ5Z28T6'" id="donate" class="btn btn-info" style="margin-left: 40px">
+                                Donar
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="https://vfpmexico.org/images/violinesPorLaPaz.png">
+                </div>
+                <div class="item">
+                    <img src="https://vfpmexico.org/images/clases.png">
+                </div>
+                <div class="item">
+                    <img src="https://vfpmexico.org/images/ninasDeportes.jpg">
+                </div>
+            </div>
+
+            <!--button prev and next-->
+            <div class="buttons">
+                <button id="prev">
+                    < </button>
+                        <button id="next"> > </button>
+            </div>
+            <!--dots-->
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4 pt-5">
+                <h2>¡TODOS TENEMOS TALENTO, SOLO FALTA ENCONTRARLO!</h2>
+            </div>
+
+            <div class="col-sm-6 pt-4">
+                <h2 class="Titulos">Nuestra Labor</h2>
+                <p>Violines Por La Paz A.C es una escuela del talento, donde ayudamos a nuestros alumnos a desarrollar
+                    sus propias herramientas para salir adelante en el futuro. Proporcionamos una formación basada en
+                    los valores, el arte y la comunicación, por medio de talleres poco comunes en las escuelas.</p>
+                <button class="btn btn-info">Conoce el modelo</button>
+            </div>
+            <div class="col-sm-6 p-4">
+                <img src = "https://vfpmexico.org/images/labor.jpg" class="rounded" width="500" height="200">
+            </div>
+
+            <div class="col-sm-6 pt-4">
+                <h2 class="Titulos">Nuestra historia</h2>
+                <p>Violines Por la Paz A.C. es una asociación civil sin fines de lucro que inició labores en el 2015 como grupo estudiantil del Tecnológico de Monterrey Campus Tampico.
+
+                    Desde entonces, nuestro objetivo es brindar herramientas de aprendizaje a niños de escasos recursos de entre seis y trece años a fin de que encuentren su pasión y su talento y lo desarrollen.</p>
+                    
+                <p>Fue hasta el año 2018 que fue constituida como asociación civil contando actualmente con presencia en Tampico, Madero, Altamira y Ciudad de México.</p>
+                <button class="btn btn-info">Conoce el modelo</button>
+            </div>
+            <div class="col-sm-6 pt-4">
+                <img src = "https://vfpmexico.org/images/historia.jpg" class="rounded" width="500" height="200">
+            </div>
+
+
+            <div class="col-sm-6 pt-4">
+                <h2 class="Titulos">Misión</h2>
+                <p>Formar y guiar a nuestros niños, niñas y adolescentes del país a encontrar su pasión y su talento a través del arte, la cultura, los deportes y el desarrollo de habilidades desconocidas para ellos, mismas que les permitan sobresalir en los ámbitos estudiantil, académico, laboral y sobre todo como seres humanos de excelencia.</p>
+                <button class="btn btn-info">Conoce el modelo</button>
+            </div>
+            <div class="col-sm-6">
+                <img src = "https://vfpmexico.org/images/ninos-salon.png" class="rounded" width="500" height="200">
+            </div>
+
+            
+            <div class="col-sm-6 pt-4">
+                <h2 class="Titulos">Visión</h2>
+                <p>Ser una institución formadora líder de jóvenes, niñas y niños con talento, pasión y humanidad.</p>
+                <button class="btn btn-info">Conoce el modelo</button>
+            </div>
+            <div class="col-sm-6">
+                <img src = "https://vfpmexico.org/images/visionImage.png" class="rounded" width="500" height="200">
+            </div>
+        </div>
+
+        <footer class = "footer">
+            
+            <div class = "row">
+                <div class = "footer-col">
+                    <h4>¿Quiénes Somos?</h4>
+                    <ul>
+                        <li><a href = "#">Nuestra Labor</a></li>
+                        <li><a href = "#">Nuestra Historia</a></li>
+                        <li><a href = "#">Misión</a></li>
+                        <li><a href = "#">Visión</a></li>
+                    </ul>
+                </div>
+                <div class = "footer-col">
+                    <h4>Modelo de Aprendizaje</h4>
+                    <ul>
+                        <li><a href = "#">El Modelo</a></li>
+                        <li><a href = "#">Los Talentos</a></li>
+                        <li><a href = "#">Deportes</a></li>
+                        <li><a href = "#">Desarrollo Personal</a></li>
+                        <li><a href = "#">Artes</a></li>
+                    </ul>
+                </div>
+                <div class = "footer-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href = "#">¿Deseas Ayudar?</a></li>
+                        <li><a href = "#">Nuestras Alianzas</a></li>
+                        <li><a href = "#">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class = "footer-col">
+                    <h4>Campañas</h4>
+                    <ul>
+                        <li><a href = "#">Actuales</a></li>
+                        <li><a href = "#box-1">Anteriores</a></li>
+                    </ul>
+                </div>
+                <div class = "footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href = "https://www.facebook.com/vfpmexico"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href = "https://www.instagram.com/vfpmexico/"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                    <img src="https://vfpmexico.org/images/logo_blanco.png">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="web.js"></script>
+</body>
+
+</html>
